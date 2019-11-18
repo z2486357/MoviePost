@@ -15,6 +15,8 @@ If you are not familiar with how to enter the application, please follow the ste
 5.open google chrome and enter the website http://localhost:4200
 
 
+
+
 First you see the website, you can see a list of popular movies.
 
 There is a search bar on the left of top. Enter some keyword of the moive's title to search the target movie.
