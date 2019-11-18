@@ -1,27 +1,15 @@
-# IMedia
+This is an application of Angular(2+)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+If you are not familiar with how to enter the application, please follow the step:
+1.Make sure you installed Angular CLI 
+1-1.If you did not, use cmd to enter "npm install -g @angular/cli" to install it. (enter without "")
+2.use cmd to enter the folder iMedia
+3.enter npm install
+4.enter ng serve
+5.open google chrome and enter the website http://localhost:4200
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+First you see the website, you can see a list of popular movies.
+There is a search bar on the left of top. Enter some keyword of the moive's title to search the target movie.
+There is a pagination on the right of the top. You can use < and > to change 1 page at a time or enter a number to directly go to the page.
+By pressing any place of the post, you can see the detail of the movie.
+There are some similiar movies of the selected movie at the bottom. Click the tag and you can directly go to the detail of it.

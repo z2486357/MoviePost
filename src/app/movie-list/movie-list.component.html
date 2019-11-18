@@ -1,0 +1,53 @@
+<div *ngIf="popularMovieData">
+  <div class="row" style="margin-top: 10px;">
+    <div class="col-md-9">
+      <p class="search">Search:</p>
+      <input
+        type="text"
+        class="searchInput"
+        placeholder="Please enter movie name"
+        [(ngModel)]="criteriaInput"
+      />
+      <button class="searchButton" (click)="search()">Search</button>
+    </div>
+    <div class="col-md-3" style="text-align: right;">
+      <p class="page nextPage" (click)="nextPage(page - 1)"><</p>
+      <p class="page">{{ page }} of {{ popularMovieData.total_pages }}</p>
+      <p class="page nextPage" (click)="nextPage(page + 1)">></p>
+      <input type="text" class="pageInput" [(ngModel)]="pageChange" />
+      <button class="changePageButton" (click)="nextPage(+pageChange)">
+        Go
+      </button>
+    </div>
+  </div>
+  <hr style="margin-top: 0;" />
+  <div
+    *ngFor="let movie of popularMovieData.results; let i = index"
+    class="list"
+    (click)="gotoDetail(movie.id)"
+  >
+    <div class="row">
+      <div class="col-md-2 posterBox">
+        <img
+          class="poster"
+          [src]="src + movie.poster_path"
+          [alt]="movie.title"
+        />
+      </div>
+      <div class="col-md-10">
+        <p class="title">{{ i + 1 + 20 * (page - 1) }}. {{ movie.title }}</p>
+        <p class="adult" *ngIf="movie.adult">Adult</p>
+        <p class="notAdult" *ngIf="!movie.adult">Not Adult</p>
+        <p class="vote">
+          score: {{ movie.vote_average }} ({{ movie.vote_count }})
+        </p>
+        <p class="date">Release Date: {{ movie.release_date }}</p>
+        <div class="overviewBox">
+          <p class="overview">Overview</p>
+          <hr style="margin: 0;" />
+          <p class="overview">{{ movie.overview }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

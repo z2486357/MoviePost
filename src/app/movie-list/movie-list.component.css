@@ -1,0 +1,107 @@
+.list {
+  border: 1px solid rgb(100, 100, 100);
+  margin: 3px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.page {
+  margin-bottom: 0;
+  margin-left: 1%;
+  display: inline;
+}
+
+.search {
+  margin-bottom: 0;
+  margin-left: 1%;
+  display: inline;
+}
+
+.nextPage {
+  cursor: pointer;
+  color: rgb(48, 25, 175);
+}
+
+.pageInput {
+  margin-left: 1%;
+  width: 15%;
+}
+
+.searchInput {
+  margin-left: 1%;
+  width: 30%;
+}
+
+.changePageButton {
+  cursor: pointer;
+  background-color: white;
+}
+
+.posterBox {
+  text-align: right;
+}
+
+.poster {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.title {
+  margin-bottom: 0;
+  font-weight: bold;
+  color: rgb(100, 84, 11);
+  font-size: 36px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.vote {
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+.date {
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+.adult {
+  background-color: red;
+  color: white;
+  margin-left: 10px;
+  margin-bottom: 0;
+  width: fit-content;
+  border-radius: 5px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.notAdult {
+  background-color: green;
+  color: white;
+  margin-left: 10px;
+  margin-bottom: 0;
+  width: fit-content;
+  border-radius: 5px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.overviewBox {
+  border: 1px solid rgb(175, 175, 175);
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+.overview {
+  margin: 0;
+}
+
+.searchButton {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 5px;
+}

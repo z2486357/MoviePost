@@ -1,0 +1,88 @@
+<button class="btn btn-white border" [routerLink]="['../']">
+  Back to list
+</button>
+<div class="margin" *ngIf="selectedMovieData">
+  <div class="row">
+    <div class="col-md-4">
+      <img
+        class="poster"
+        [src]="src + selectedMovieData.poster_path"
+        [alt]="selectedMovieData.title"
+      />
+    </div>
+    <div class="col-md-8">
+      <p class="title">{{ selectedMovieData.title }}</p>
+      <p class="tagline">{{ selectedMovieData.tagline }}</p>
+      <p class="adult" *ngIf="selectedMovieData.adult">Adult</p>
+      <p class="notAdult" *ngIf="!selectedMovieData.adult">Not Adult</p>
+      <p class="mb0">
+        score: {{ selectedMovieData.vote_average }} ({{
+          selectedMovieData.vote_count
+        }})
+      </p>
+      <p class="mb0">Popularity: {{ selectedMovieData.popularity }}</p>
+      <p class="oneLine">Spoken Language:</p>
+      <p
+        class="oneLine"
+        *ngFor="
+          let language of selectedMovieData.spoken_languages;
+          let i = index
+        "
+      >
+        {{ language.name }}
+        <a *ngIf="i != selectedMovieData.spoken_languages.length - 1">,</a>
+      </p>
+      <p class="mb0">Release Date: {{ selectedMovieData.release_date }}</p>
+      <p class="mb0">
+        Homepage:
+        <a [href]="selectedMovieData.homepage">{{
+          selectedMovieData.homepage
+        }}</a>
+      </p>
+      <div class="overviewBox">
+        <p class="overview">Overview</p>
+        <hr style="margin: 0;" />
+        <p class="overview">{{ selectedMovieData.overview }}</p>
+      </div>
+      <p class="oneLine">Production Country:</p>
+      <p
+        class="oneLine"
+        *ngFor="
+          let country of selectedMovieData.production_countries;
+          let i = index
+        "
+      >
+        {{ country.name }}
+        <a *ngIf="i != selectedMovieData.production_countries.length - 1">,</a>
+      </p>
+      <br />
+      <p class="mb0">Production Companies:</p>
+      <div
+        class="oneLine"
+        *ngFor="
+          let company of selectedMovieData.production_companies;
+          let i = index
+        "
+      >
+        <img
+          class="logo"
+          [src]="src + company.logo_path"
+          [alt]="company.name"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row similiarArea">
+    <div *ngIf="similiarMovieData">
+      <hr />
+      <p class="mb0">Similiar Movies:</p>
+      <p
+        class="similiar"
+        *ngFor="let movie of similiarMovieData.results"
+        (click)="gotomovie(movie.id)"
+      >
+        {{ movie.title }}
+      </p>
+    </div>
+  </div>
+</div>
