@@ -1,4 +1,4 @@
-This is an application of Angular(2+). The API and data used in this application came from the websit https://developers.themoviedb.org
+This is an application of Angular(2+). The API and data used in this application was from the website https://developers.themoviedb.org
 
 If you are not familiar with how to enter the application, please follow the step:
 
